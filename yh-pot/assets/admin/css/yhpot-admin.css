@@ -1,0 +1,251 @@
+/* Section 6 - Hover Effect 6 */
+
+.row {
+    max-width: 1200px;
+    width: 100%;
+}
+.figure * {
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+.yhpot-demo-item {  
+    display: inline-block;    
+    max-width: 350px;
+    min-width: 230px;      
+    text-align: center;   
+    cursor: pointer;
+    margin: 10px;
+}
+.on-hover{
+    display: none;
+}
+.yhpot-container .figure:hover .on-hover{
+    display: block;
+    opacity: .8;
+}
+
+.figure{
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+a.btn.yhpot-btn {
+    background: #29a587;
+    padding: 10px 25px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.yhpot-container { 
+    color: #efefef;
+}
+.yhpot-container .figure {
+    text-align: left;
+    background: #1d1d1d;
+    font-size: 16px;
+}
+.yhpot-container .figure img {
+    position: relative;
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;    
+    transform: translateY(0);
+    transition: 5s ease-out;
+    opacity: 1;
+}
+.yhpot-container figcaption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    padding: 20px 30px;
+}
+.yhpot-container .figure figcaption:before,
+.yhpot-container .figure figcaption:after {
+    width: 1px;
+    height: 0;
+}
+.yhpot-container .figure figcaption:before {
+    right: 0;
+    top: 0;
+}
+.yhpot-container .figure figcaption:after {
+    left: 0;
+    bottom: 0;
+}
+.yhpot-container .figure h3,
+.yhpot-container .figure p {
+    line-height: 1.5em;
+}
+.yhpot-container .figure h3 {
+    margin: 0 0 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.yhpot-container .figure p {
+    font-size: 0.8em;
+    font-weight: 400;
+    margin: 0 0 15px;
+}
+.yhpot-container .yhpot_import_demo_wrap {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.yhpot-container .yhpot_import_demo_wrap a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+.yhpot-container .figure:before,
+.yhpot-container .figure:after,
+.yhpot-container .figure figcaption:before,
+.yhpot-container .figure figcaption:after {
+    position: absolute;
+    content: '';
+    background-color: #efefef;
+    z-index: 1;
+    -webkit-transition: all 0.35s ease-in;
+    transition: all 0.35s ease-in;
+    opacity: 0.8;
+}
+.yhpot-container .figure:before,
+.yhpot-container .figure:after {
+    height: 1px;
+    width: 0%;
+}
+.yhpot-container .figure:before {
+    top: 0;
+    left: 0;
+}
+.yhpot-container .figure:after {
+    bottom: 0;
+    right: 0;
+}
+.yhpot-container .figure:hover img,
+.yhpot-container .figure.hover img {
+    object-fit: cover;
+    transform: translateY(calc(-100% + 500px));
+    transition: 5s ease-out;    
+}
+.yhpot-container .figure:hover figcaption:before,
+.yhpot-container .figure.hover figcaption:before,
+.yhpot-container .figure:hover figcaption:after,
+.yhpot-container .figure.hover figcaption:after {
+    height: 100%;
+}
+.yhpot-container .figure:hover figcaption {
+    opacity: 1;
+}
+.yhpot-container .figure:hover:before,
+.yhpot-container .figure.hover:before,
+.yhpot-container .figure:hover:after,
+.yhpot-container .figure.hover:after {
+    width: 100%;
+}
+.yhpot-container .figure:hover:before,
+.yhpot-container .figure.hover:before,
+.yhpot-container .figure:hover:after,
+.yhpot-container .figure.hover:after,
+.yhpot-container .figure:hover figcaption:before,
+.yhpot-container .figure.hover figcaption:before,
+.yhpot-container .figure:hover figcaption:after,
+.yhpot-container .figure.hover figcaption:after {
+    opacity: 0.1;
+}
+
+/* Popup Css */
+.demo_item_popup {
+    position: fixed;
+    top: 7.5%;
+    left: 0;
+    right: 0;
+    max-width: 600px;
+    margin: auto;
+    overflow: visible;
+    box-sizing: border-box;
+    z-index: 99999;
+    display: none;
+    background: white;
+    color: black;
+    text-align: left;
+    border-radius: 5px;
+    padding: 10px;
+}
+.demo-import-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    display: none;
+}
+a.close_btn_wrap.yhpot_close_popup {
+    text-align: right;
+    display: block;
+    color: white;
+    margin-top: -25px;
+    text-decoration: none;
+}
+.yhpot_required_plugins h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.yhpot_plugin_item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.yhpot_plugin_item .name {
+    font-weight: 600;
+}
+.yhpot_import_data {
+    text-align: center;
+}
+.yhpot_import_data a {
+    background: lightsteelblue;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 20px 0;
+    color: black;
+    font-weight: 500;
+    margin: -10px;
+}
+.import_data_wrapper{
+    margin: 20px 0;
+}
+.import_data_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.import_data_wrapper p {
+    width: 25%;
+}
+h4.demo-form-title {
+    font-weight: bold;
+}
+.import_data_wrapper label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.required-plugin-status a.installing:before {
+    display: inline-block;
+    font: 400 20px/1 dashicons;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: top;
+    color: #f56e28;
+    content: "\f463";
+    animation: rotation 2s infinite linear;
+}
